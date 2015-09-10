@@ -37,7 +37,7 @@ class ColrTest extends PHPUnit_Framework_TestCase {
 
     public function testWriteNewLine() {
         $result = $this->colr->fg(Colr::RED)->bg(Colr::RED)->writeln("test");
-        $this->assertEquals("\033[0;31m\033[41mtest\n\033[0m", $result);
+        $this->assertEquals("\033[0;31m\033[41mtest\033[0m\n", $result);
     }
 
     public function testSingleColorPreset() {
